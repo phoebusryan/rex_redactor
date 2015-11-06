@@ -1,4 +1,4 @@
-Redactor-Editor für REDAXO 4
+Redactor-Editor für REDAXO 5
 ========================
 
 redactor v10.2.5 - Fantastic WYSIWYG editor on jQuery - http://imperavi.com/redactor/
