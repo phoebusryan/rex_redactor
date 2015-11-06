@@ -1,8 +1,10 @@
-Dummy-AddOn für REDAXO 5
+Redactor-Editor für REDAXO 4
 ========================
 
-Bitte auch den Wiki-Artikel "[Änderungen in REDAXO 5](https://github.com/redaxo/redaxo/wiki/Aenderungen-in-REDAXO-5)" beachten!
+redactor v10.2.5 - Fantastic WYSIWYG editor on jQuery - http://imperavi.com/redactor/
 
-Folgende Dateien gehören nicht direkt zum Addon, sondern werden nur für das Repository benötigt: `.travis.yml`, `README.md`
+Das Addon bindet den WYSIWYG-Editor redactor im Backend und bei Bedarf auch im Frontend ein.
 
-[![Build Status](https://secure.travis-ci.org/gharlan/redaxo_dummy.png?branch=master)](https://travis-ci.org/gharlan/redaxo_dummy)
+Das Addon ist vorkonfiguriert inklusive Linkmap/Mediapool-Integration. Die Konfiguration kann bei Bedarf im Backend angepasst werden. Zusätzlich kann eigener JavaScript-Code und Clips zum einfügen in Redactor gepflegt werden.
+
+Peter Bickel hat die Entwicklerlizenz spendiert!
