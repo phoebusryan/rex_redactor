@@ -1,0 +1,42 @@
+rex_redactor_title = Redactor Editor
+
+#general
+rex_redactor_button_save = Speichern
+rex_redactor_config_saved = Einstellungen erfolgreich gespeichert!
+
+#subpage tutorial
+rex_redactor_tutorial = Erklärung
+rex_redactor_tutorial_infotext = redactor.js Version 10.2.5, http://imperavi.com/redactor/<br><br>Das Addon bindet den WYSIWYG-Editor redactor im Backend und bei Bedarf auch im Frontend ein.<br><br>Abhängig von der Konfiguration des Redactor-Addons wird automatisch im Backend und im Frontend der Redactor-WYSIWYG-Editor für Textareas eingebunden.<br><br>Textareas mit der Klasse <i>redactorEditor</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea <b>class="redactorEditor"</b>></textarea><br><br>Im Backend können verschiedene Editor-Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden. Diese Editor-Profile können durch anhängen des Profil-Namens an die Klasse angewendet werden.z.B.: <textarea <b>class="redactorEditor-simple"</b>></textarea><br><br><b>HINWEIS:</b><br>Der Eintrag mit der <b>ID=1</b> und Name <b>default</b> darf nicht gelöscht werden!
+
+#subpage configuration
+rex_redactor_configuration = Konfiguration
+
+#subpage profiles
+rex_redactor_profiles = Profile
+rex_redactor_profiles_column_name = Name
+rex_redactor_profiles_column_description = Beschreibung
+rex_redactor_profiles_column_language = Sprache
+rex_redactor_profiles_column_functions = Funktionen
+rex_redactor_profiles_formcaption_add = Profil hinzufügen
+rex_redactor_profiles_formcaption_edit = Profil editieren
+rex_redactor_profiles_label_name = Name
+rex_redactor_profiles_label_description = Beschreibung
+rex_redactor_profiles_label_language = Sprache
+rex_redactor_profiles_label_redactorconfiguration = Redactor-Konfiguration
+
+#subpage css
+rex_redactor_css = CSS für Redactor
+rex_redactor_css_infotext = Die Darstellung des Redactor-Editors können dadurch beeinflusst werden. Weitere Informationen finden sich in der Redactor-Dokumentation.
+rex_redactor_css_formcaption = Custom CSS für Redactor
+
+#subpage js
+rex_redactor_js = JS für Redactor
+rex_redactor_js_infotext = Zusätzlicher JavaScript-Code z.B. für eigene Functions die bei Custom-Buttons verwendet werden.
+rex_redactor_js_formcaption = Custom JS für Redactor
+
+perm_general_rex_redactor[] = Rechte für Redactor-Addon
+perm_general_rex_redactor[tutorial] = Rechte für die Seite 'Erklärung' des Redactor-Addons
+perm_general_rex_redactor[configuration] = Rechte für die Seite 'Konfiguration' des Redactor-Addons
+perm_general_rex_redactor[profles] = Rechte für die Seite 'Editor-Profile' des Redactor-Addons
+perm_general_rex_redactor[css] = Rechte für die Seite 'CSS' des Redactor-Addons
+perm_general_rex_redactor[js] = Rechte für die Seite 'JS' des Redactor-Addons
