@@ -1,9 +1,6 @@
 $.Redactor.prototype.rex_linkmap = function() {
 	return {
 		init: function() {
-			$('<input>').attr({ type: 'hidden', id: 'redactor_rex_linkmap_insert'+this.uuid}).appendTo($('#REX_FORM'));
-			$('<input>').attr({ type: 'hidden', id: 'redactor_rex_linkmap_insert'+this.uuid+'_NAME'}).appendTo($('#REX_FORM'));
-			
 			var button = this.button.add('rex_linkmap', this.lang.get('link'));
 			this.button.setAwesome('rex_linkmap', 'fa-link');
 			
@@ -15,23 +12,12 @@ $.Redactor.prototype.rex_linkmap = function() {
 			this.button.addDropdown(button, dropdown);
 		},
 		addLink: function() {
-			var that = this;
-			
-			$('#redactor_rex_linkmap_insert'+that.uuid).val('');
-			
-			openLinkMap('redactor_rex_linkmap_insert'+this.uuid);
-			
-			var callbackInterval = setInterval (function() {
-				if ($('#redactor_rex_linkmap_insert'+that.uuid).val() != '') {
-					clearInterval(callbackInterval);
-					
-					var linkID = $('#redactor_rex_linkmap_insert'+that.uuid).val();
-					var linkText = $('#redactor_rex_linkmap_insert'+that.uuid+'_NAME').val();
-					
-					var html = '<a href="redaxo://' + linkID + '">' + linkText + '</a>';
-					that.insert.html(html);
-				}
-			}, 500);
+			var redactorFieldID = $(this.$element).attr('id');
+			openLinkMap(redactorFieldID, '&referrer=redactor&pluginname=rex_linkmap');
+		},
+		insertLink: function(url, title) {
+			var html = '<a href="' + url + '" title="'+title+'">' + title + '</a>';
+			this.insert.html(html);
 		},
 		removeLink: function() {
 			console.log('remove');
