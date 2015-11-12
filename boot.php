@@ -14,13 +14,14 @@
 			unset($sql);
 			
 			$javascriptCode = '';
-			$javascriptCode .= '$(document).ready(function() {';
+			$javascriptCode .= '$(document).on(\'ready pjax:success\',function() {';
 			foreach ($profiles as $profile) {
 				rex_view::addJsFile($this->getAssetsUrl('langs/'.$profile['language'].'.js'));
 				
 				$javascriptCode .= '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
 				$javascriptCode .= 'lang: \''.$profile['language'].'\',';
-				$javascriptCode .= 'plugins:[\'rex_mediapool\', \'rex_linkmap\'],';
+				
+				$javascriptCode .= $this->getConfig('redactor_enhancements');
 				
 				$javascriptCode .= $profile['redactor_configuration'];
 				
@@ -29,10 +30,30 @@
 			$javascriptCode .= '});';
 			
 			if (!rex_file::put(rex_path::addonAssets('rex_redactor', 'cache/redactor_profiles.js').'', $javascriptCode)) {
-				echo 'file konnte nicht gespeichert werden';
+				echo 'js-file konnte nicht gespeichert werden';
 			}
 			
 			rex_view::addJsFile($this->getAssetsUrl('cache/redactor_profiles.js'));
 		//End - get redactor-profiles
+		
+		//Start - include custom js
+			$customJS = $this->getConfig('custom_js');
+			
+			if (!rex_file::put(rex_path::addonAssets('rex_redactor', 'cache/custom_js.js').'', $customJS)) {
+				echo 'customJS konnte nicht gespeichert werden';
+			}
+			
+			rex_view::addJsFile($this->getAssetsUrl('cache/custom_js.js'));
+		//End - include custom js
+		
+		//Start - include custom css
+			$customCSS = $this->getConfig('custom_css');
+			
+			if (!rex_file::put(rex_path::addonAssets('rex_redactor', 'cache/custom_css.css').'', $customCSS)) {
+				echo 'customCSS konnte nicht gespeichert werden';
+			}
+			
+			rex_view::addCssFile($this->getAssetsUrl('cache/custom_css.css'));
+		//End - include custom css
 	}
 ?>

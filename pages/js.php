@@ -7,7 +7,7 @@
 		echo rex_view::success($this->i18n('config_saved'));
 	}
 	
-	echo rex_view::info($this->i18n('css_infotext'));
+	echo rex_view::info($this->i18n('js_infotext'));
 	
 	$config = rex_config::get('rex_redactor');
 	
@@ -43,7 +43,7 @@
 		
 		$fragment = new rex_fragment();
 		$fragment->setVar('class', 'edit', false);
-		$fragment->setVar('title', $this->i18n('css_formcaption'), false);
+		$fragment->setVar('title', $this->i18n('js_formcaption'), false);
 		$fragment->setVar('body', $content, false);
 		$fragment->setVar('buttons', $buttons, false);
 		$content = $fragment->parse('core/page/section.php');

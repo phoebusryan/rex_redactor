@@ -9,7 +9,7 @@ $.Redactor.prototype.rex_linkmap = function() {
 			
 			var dropdown = {};
 			
-			dropdown.point1 = { title: this.lang.get('link_insert'), func: this.rex_linkmap.addLink };
+			dropdown.point1 = { title: this.lang.get('link'), func: this.rex_linkmap.addLink };
 			dropdown.point2 = { title: this.lang.get('unlink'), func: this.rex_linkmap.removeLink };
 			
 			this.button.addDropdown(button, dropdown);

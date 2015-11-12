@@ -1,11 +1,13 @@
 <?php
 	if (rex_post('save', 'string') != '') {
-		foreach (['twitter_consumer_token', 'twitter_consumer_secret_token', 'twitter_access_token', 'twitter_secret_token'] as $field) {
+		foreach (['redactor_enhancements'] as $field) {
 			$this->setConfig($field, rex_post($field, 'string'));
 		}
 		
 		echo rex_view::success($this->i18n('config_saved'));
 	}
+	
+	$config = rex_config::get('rex_redactor');
 	
 	//Start - configuration form
 		$content = '';
@@ -17,7 +19,12 @@
 		
 		////
 		
-		//fields goes here
+		//Start - add custom_css field
+			$n = [];
+			$n['label'] = '<label for="rex-form-redactor_enhancements">' . 'Redactor Enhancements' . '</label>';
+			$n['field'] = '<textarea class="form-control" id="rex-form-redactor_enhancements" name="redactor_enhancements">'.$config['redactor_enhancements'].'</textarea>';
+			$formElements[] = $n;
+		//End - add custom_css field
 		
 		////
 		
@@ -29,7 +36,7 @@
 	
 		$formElements = [];
 		$n = [];
-		$n['field'] = '<button class="btn btn-save rex-form-aligned" type="submit" name="save" value="' . $this->i18n('twitter_button_save') . '">' . $this->i18n('twitter_button_save'). '</button>'; //todo
+		$n['field'] = '<button class="btn btn-save rex-form-aligned" type="submit" name="save" value="' . $this->i18n('button_save') . '">' . $this->i18n('button_save'). '</button>';
 		$formElements[] = $n;
 		
 		$fragment = new rex_fragment();
