@@ -1,0 +1,1 @@
+Insert and format tables with ease.

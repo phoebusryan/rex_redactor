@@ -1,0 +1,1 @@
+Expand Redactor to fill the whole screen. Also known as "distraction free" mode.

@@ -1,0 +1,1 @@
+Fügt die Möglichkeit hinzu, interne Links via Linkmap zu setzen

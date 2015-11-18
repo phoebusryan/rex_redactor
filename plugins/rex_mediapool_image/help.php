@@ -1,0 +1,1 @@
+Fügt die Möglichkeit hinzu, Bilder aus dem Medienpool einzubinden
