@@ -7,17 +7,22 @@ $.Redactor.prototype.rex_mediapool_link = function() {
 			this.button.addCallback(button, this.rex_mediapool_link.addFileLink);
 		},
 		addFileLink: function() {
+			alert('Not implemented yet - EP required');
+			/*
 			this.selection.save();
 			
 			var redactorFieldID = $(this.$element).attr('id');
 			newPoolWindow('index.php?page=mediapool/media&referrer=redactor&pluginname=rex_mediapool_link&opener_input_field='+redactorFieldID);
+			*/
 		},
 		selectMedia: function(filename, title) {
+			/*
 			this.selection.restore();
 			var selectedText = this.selection.getText();
 			
 			var html = '<a href="./media/' + filename + '" title="'+title+'">' + ((selectedText != '') ? selectedText : title) + '</a>';
 			this.insert.html(html);
+			*/
 		}
 	};
 };

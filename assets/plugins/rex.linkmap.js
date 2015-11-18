@@ -10,7 +10,7 @@ $.Redactor.prototype.rex_linkmap = function() {
 			this.selection.save();
 			
 			var redactorFieldID = $(this.$element).attr('id');
-			openLinkMap(redactorFieldID, '&referrer=redactor&pluginname=rex_linkmap');
+			openLinkMap(redactorFieldID);
 		},
 		insertLink: function(url, title) {
 			this.selection.restore();

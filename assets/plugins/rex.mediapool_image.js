@@ -8,7 +8,7 @@ $.Redactor.prototype.rex_mediapool_image = function() {
 		addImage: function() {
 			var redactorFieldID = $(this.$element).attr('id');
 			
-			newPoolWindow('index.php?page=mediapool/media&referrer=redactor&pluginname=rex_mediapool_image&opener_input_field='+redactorFieldID);
+			newPoolWindow('index.php?page=mediapool/media&opener_input_field='+redactorFieldID);
 		},
 		selectMedia: function(filename, title) {
 			var html = '<img src="index.php?rex_media_type=redactorImage&rex_media_file=' + filename + '" alt="'+title+'">';

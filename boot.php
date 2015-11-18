@@ -54,21 +54,24 @@
 			}
 			
 			rex_view::addCssFile($this->getAssetsUrl('cache/custom_css.css'));
-		//End - include custom css	
+		//End - include custom css
 	
 		//Start use OUTPUT_FILTER-EP to use an custom callback
 			rex_extension::register('OUTPUT_FILTER', function($param) {
 				$page = rex_request('page', 'string');
-				$referrer = rex_request('referrer', 'string');
 				$opener_input_field = rex_request('opener_input_field', 'string');
-				$pluginname = rex_request('pluginname', 'string');
 				
 				$content = $param->getSubject();
 				
-				if ($page == 'mediapool/media' && $referrer == 'redactor') {
-					$content = preg_replace("|javascript:selectMedia\(\'(.*)\', \'(.*)\'\);|", "javascript:window.opener.$('#".$opener_input_field."').redactor('".$pluginname.".selectMedia', '$1', '$2');self.close();", $content);
-				} else if ($page == 'linkmap' && $referrer == 'redactor') {
-					$content = preg_replace("|javascript:insertLink\(\'(.*)\',\'(.*)\'\);|",  "javascript:window.opener.$('#".$opener_input_field."').redactor('".$pluginname.".insertLink', '$1', '$2');self.close();", $content);
+				if (substr($opener_input_field, 0, 9) == 'redactor_') {
+					switch ($page) {
+						case 'mediapool/media':
+							$content = preg_replace("|javascript:selectMedia\(\'(.*)\', \'(.*)\'\);|", "javascript:window.opener.$('#".$opener_input_field."').redactor('rex_mediapool_image.selectMedia', '$1', '$2');self.close();", $content);
+						break;
+						case 'linkmap':
+							$content = preg_replace("|javascript:insertLink\(\'(.*)\',\'(.*)\'\);|",  "javascript:window.opener.$('#".$opener_input_field."').redactor('rex_linkmap.insertLink', '$1', '$2');self.close();", $content);
+						break;
+					}
 				}
 				
 				return $content;
