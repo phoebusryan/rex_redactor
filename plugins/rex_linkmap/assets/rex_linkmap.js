@@ -1,7 +1,7 @@
 $.Redactor.prototype.rex_linkmap = function() {
 	return {
 		init: function() {
-			var button = this.button.add('rex_linkmap', this.lang.get('link'));
+			var button = this.button.add('rex_linkmap', 'Redaxo ' + this.lang.get('link'));
 			this.button.setAwesome('rex_linkmap', 'fa-link');
 			
 			this.button.addCallback(button, this.rex_linkmap.addLink);

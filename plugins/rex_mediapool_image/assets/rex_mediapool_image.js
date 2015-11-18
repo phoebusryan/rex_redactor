@@ -1,7 +1,7 @@
 $.Redactor.prototype.rex_mediapool_image = function() {
 	return {
 		init: function() {
-			var button = this.button.add('rex_mediapool_image', this.lang.get('image'));
+			var button = this.button.add('rex_mediapool_image', 'Redaxo ' + this.lang.get('image'));
 			this.button.setAwesome('rex_mediapool_image', 'fa-picture-o');
 			this.button.addCallback(button, this.rex_mediapool_image.addImage);
 		},
