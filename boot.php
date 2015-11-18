@@ -3,9 +3,10 @@
 		rex_view::addCssFile($this->getAssetsUrl('redactor.css'));
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 		
-		$plugins = glob(rex_path::addonAssets('rex_redactor', 'plugins').'/*.js');
-		foreach ($plugins as $plugin) {
-			rex_view::addJsFile($this->getAssetsUrl('plugins/'.substr($plugin, strlen(rex_path::addonAssets('rex_redactor', 'plugins'))+1)));
+		$plugins = glob(rex_path::addonAssets('rex_redactor', 'plugins').'/*/*.js');
+		foreach ($plugins as $index => $plugin) {
+			$plugins[$index] = substr($plugin, strrpos($plugin, '/')+1,-3);
+			rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugins[$index].'/'.$plugins[$index].'.js'));
 		}
 		
 		//Start - get redactor-profiles
@@ -20,6 +21,10 @@
 				
 				$javascriptCode .= '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
 				$javascriptCode .= 'lang: \''.$profile['language'].'\',';
+				
+				if (!empty($plugins)) {
+					$javascriptCode .= 'plugins: [\''.implode('\',\'', $plugins).'\'],';
+				}
 				
 				$javascriptCode .= $this->getConfig('redactor_enhancements');
 				
