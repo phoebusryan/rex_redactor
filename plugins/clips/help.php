@@ -1,0 +1,1 @@
+Create a dropdown of frequently used "snippets" of code, text, icons, emoji, you name it.
