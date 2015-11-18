@@ -60,7 +60,7 @@
 			$field = $form->addSelectField('language');
 			$field->setLabel($this->i18n('profiles_label_language'));
 			
-			$select = &$field->getSelect();
+			$select = $field->getSelect();
 			$select->setSize(1);
 			$select->addOption('---', 0);
 			
