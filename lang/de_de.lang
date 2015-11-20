@@ -6,10 +6,7 @@ rex_redactor_config_saved = Einstellungen erfolgreich gespeichert!
 
 #subpage tutorial
 rex_redactor_tutorial = Erklärung
-rex_redactor_tutorial_infotext = redactor.js Version 10.2.5, http://imperavi.com/redactor/<br><br>Das Addon bindet den WYSIWYG-Editor redactor im Backend.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea <b>class="redactorEditor-default"</b>></textarea><br><br>Im Backend können verschiedene Editor-Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.
-
-#subpage configuration
-rex_redactor_configuration = Konfiguration
+rex_redactor_tutorial_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
 
 #subpage profiles
 rex_redactor_profiles = Profile
@@ -22,21 +19,29 @@ rex_redactor_profiles_formcaption_edit = Profil editieren
 rex_redactor_profiles_label_name = Name
 rex_redactor_profiles_label_description = Beschreibung
 rex_redactor_profiles_label_language = Sprache
-rex_redactor_profiles_label_redactorconfiguration = Redactor-Konfiguration
+rex_redactor_profiles_label_redactorbuttons = Redactor-Buttons
 
-#subpage css
-rex_redactor_css = CSS für Redactor
-rex_redactor_css_infotext = Hier können die CSS-Formatierungen aus dem Frontend-CSS eingefügt werden damit im Backend im Editor z.B. schon die korrekten Farben angezeigt werden.<br>Auch die Darstellung des Redactor-Editors kann dadurch beeinflusst werden. Weitere Informationen finden sich in der Redactor-Dokumentation.
-rex_redactor_css_formcaption = Custom CSS für Redactor
-
-#subpage js
-rex_redactor_js = JS für Redactor
-rex_redactor_js_infotext = Zusätzlicher JavaScript-Code z.B. für eigene Functions die bei Custom-Buttons verwendet werden.
-rex_redactor_js_formcaption = Custom JS für Redactor
+rex_redactor_profiles_buttons_alignment = Setzt die Ausrichtung des markierten Texts
+rex_redactor_profiles_buttons_bold = Macht den markierten Text fett
+rex_redactor_profiles_buttons_clips = Fügt vordefinierte Textsnippets ein
+rex_redactor_profiles_buttons_deleted = Streicht den markierten Text durch
+rex_redactor_profiles_buttons_fontcolor = Definiert die Schriftfarbe
+rex_redactor_profiles_buttons_fontfamily = Definiert die Schriftart
+rex_redactor_profiles_buttons_fontsize = Definiert die Schriftgrösse
+rex_redactor_profiles_buttons_formatting = Definiert die Formatierung
+rex_redactor_profiles_buttons_fullscreen = Ermöglicht Vollbild
+rex_redactor_profiles_buttons_italic = Macht den markierten Text kursiv
+rex_redactor_profiles_buttons_orderedlist = Füge eine sortierte Liste ein
+rex_redactor_profiles_buttons_rex_linkmap = Fügt einen Link aus der Linkmap ein
+rex_redactor_profiles_buttons_rex_mediapool_image = Fügt Bilder aus dem Medienpool ein
+rex_redactor_profiles_buttons_rex_mediapool_link = Fügt einen Link aus dem Medienpool ein
+rex_redactor_profiles_buttons_table = Fügt Tabellen ein
+rex_redactor_profiles_buttons_textdirection = Legt die Textausrichtung fest
+rex_redactor_profiles_buttons_textexpander = Vervollständigt vordefinierte Texte
+rex_redactor_profiles_buttons_underline = Unterstreicht den markierten Text
+rex_redactor_profiles_buttons_unorderedlist = Füge eine unsortierte Liste ein
+rex_redactor_profiles_buttons_video = Fügt ein Video ein
 
 perm_general_rex_redactor[] = Rechte für Redactor-Addon
 perm_general_rex_redactor[tutorial] = Rechte für die Seite 'Erklärung' des Redactor-Addons
-perm_general_rex_redactor[configuration] = Rechte für die Seite 'Konfiguration' des Redactor-Addons
-perm_general_rex_redactor[profles] = Rechte für die Seite 'Editor-Profile' des Redactor-Addons
-perm_general_rex_redactor[css] = Rechte für die Seite 'CSS' des Redactor-Addons
-perm_general_rex_redactor[js] = Rechte für die Seite 'JS' des Redactor-Addons
+perm_general_rex_redactor[profles] = Rechte für die Seite 'Profile' des Redactor-Addons
