@@ -3,15 +3,9 @@
 		rex_view::addCssFile($this->getAssetsUrl('redactor.css'));
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 		
-		$plugins = glob(rex_path::addonAssets('rex_redactor', 'plugins').'/*/*.js');
-		foreach ($plugins as $index => $plugin) {
-			$plugins[$index] = substr($plugin, strrpos($plugin, '/')+1,-3);
-			rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugins[$index].'/'.$plugins[$index].'.js'));
-		}
-		
 		//Start - get redactor-profiles
 			$sql = rex_sql::factory();
-			$profiles = $sql->setQuery("SELECT `name`, `language`, `redactor_configuration` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC")->getArray();
+			$profiles = $sql->setQuery("SELECT `name`, `language`, `redactor_buttons` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC")->getArray();
 			unset($sql);
 			
 			$javascriptCode = '';
@@ -19,16 +13,57 @@
 			foreach ($profiles as $profile) {
 				rex_view::addJsFile($this->getAssetsUrl('langs/'.$profile['language'].'.js'));
 				
+				$redactorConfig = [];
+				$redactorButtons = [];
+				$redactorPlugins = [];
+				
 				$javascriptCode .= '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
 				$javascriptCode .= 'lang: \''.$profile['language'].'\',';
 				
-				if (!empty($plugins)) {
-					$javascriptCode .= 'plugins: [\''.implode('\',\'', $plugins).'\'],';
-				}
+				//Start - get buttonconfiguration
+					$buttons = explode(',', $profile['redactor_buttons']);
+					foreach ($buttons as $button) {
+						if (preg_match('/(.*)\[(.*)\]/', $button, $matches)) {
+							
+							//Start - explode parameters
+								$parameters = explode('|', $matches[2]);
+								$parameterString = '';
+								foreach ($parameters as $parameter) {
+									if (strpos($parameter, '=') !== false) {
+										list($key, $value) = explode('=',$parameter);
+										$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
+									} else {
+										$parameterString .= "'".$parameter."',";
+									}
+								}
+								
+								$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
+							//End - explode parameters
+							
+//							echo '<pre>'.print_r($params,true).'</pre>';
+							
+//							$redactorConfig[] =  $matches[1].': [\''.(implode('\',\'', explode('|', $matches[2]))).'\'],';
+							
+							if (in_array($matches[1], ['clips','fontcolor','fontfamily','fontsize','textexpander'])) {
+								$redactorPlugins[] = $matches[1];
+								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$matches[1].'.js'));
+							} else {
+								$redactorButtons[] = $matches[1];
+							}
+						} else {
+							if (in_array($button, ['fullscreen','rex_linkmap','rex_mediapool_image','rex_mediapool_link','table','video'])) {
+								$redactorPlugins[] = $button;
+								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$button.'.js'));
+							} else {
+								$redactorButtons[] = $button;
+							}
+						}
+					}
+				//End - get buttonconfiguration
 				
-				$javascriptCode .= $this->getConfig('redactor_enhancements');
-				
-				$javascriptCode .= $profile['redactor_configuration'];
+				$javascriptCode .= 'buttons: [\''.implode('\',\'', $redactorButtons).'\'],';
+				$javascriptCode .= 'plugins: [\''.implode('\',\'', $redactorPlugins).'\'],';
+				$javascriptCode .= implode(PHP_EOL, $redactorConfig);
 				
 				$javascriptCode .= '});';
 			}
