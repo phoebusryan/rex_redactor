@@ -1,21 +1,21 @@
 rex_redactor_title = Redactor Editor
 
-#general
-rex_redactor_button_save = Speichern
-rex_redactor_config_saved = Einstellungen erfolgreich gespeichert!
-
 #subpage tutorial
 rex_redactor_tutorial = Erklärung
 rex_redactor_tutorial_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
 
 #subpage profiles
 rex_redactor_profiles = Profile
+rex_redactor_profiles_norowsmessage = Es wurden keine Profile gefunden
+
 rex_redactor_profiles_column_name = Name
 rex_redactor_profiles_column_description = Beschreibung
 rex_redactor_profiles_column_language = Sprache
 rex_redactor_profiles_column_functions = Funktionen
+
 rex_redactor_profiles_formcaption_add = Profil hinzufügen
 rex_redactor_profiles_formcaption_edit = Profil editieren
+
 rex_redactor_profiles_label_name = Name
 rex_redactor_profiles_label_description = Beschreibung
 rex_redactor_profiles_label_language = Sprache
@@ -46,6 +46,7 @@ rex_redactor_profiles_buttons_underline = Unterstreicht den markierten Text
 rex_redactor_profiles_buttons_unorderedlist = Füge eine unsortierte Liste ein
 rex_redactor_profiles_buttons_video = Fügt ein Video ein
 
+#permissions
 perm_general_rex_redactor[] = Rechte für Redactor-Addon
 perm_general_rex_redactor[tutorial] = Rechte für die Seite 'Erklärung' des Redactor-Addons
 perm_general_rex_redactor[profles] = Rechte für die Seite 'Profile' des Redactor-Addons
