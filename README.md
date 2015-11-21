@@ -6,3 +6,12 @@ redactor v10.2.5 - Fantastic WYSIWYG editor on jQuery - http://imperavi.com/reda
 Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.
 
 Peter Bickel hat die Entwicklerlizenz spendiert!
+
+---
+
+Bekannte Bugs:
+- Sortierung der Buttons stimmt nicht immer
+
+Zukünftige Features:
+- Undo / Redo
+- Autosave
