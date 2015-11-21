@@ -1,1 +1,0 @@
-Easily change the direction of the text in a block element (paragraph, header, blockquote etc.).

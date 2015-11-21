@@ -1,1 +1,0 @@
-Enter a short snippet of text or a word and this plugin will replace it to a frequently used predefined text. 

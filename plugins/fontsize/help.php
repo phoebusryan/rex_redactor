@@ -1,1 +1,0 @@
-Change the font size specified in pixels. Bigger sometimes is better.

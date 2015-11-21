@@ -1,1 +1,0 @@
-Set the text color and/or text background color.
