@@ -4,6 +4,7 @@
 	if ($func == '') {
 		$list = rex_list::factory("SELECT `id`, `name`, `description`, `language` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC");
 		$list->addTableAttribute('class', 'table-striped');
+		$list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
 		
 		// icon column
 		$thIcon = '<a href="'.$list->getUrl(['func' => 'add']).'" title="'.$this->i18n('column_hashtag').' '.rex_i18n::msg('add').'"><i class="rex-icon rex-icon-add-action"></i></a>';
@@ -182,5 +183,11 @@
 		$content = $fragment->parse('core/page/section.php');
 		
 		echo $content;
+	} else if ($func == 'delete') {
+		$id = rex_request('id', 'int');
+		
+		$del = rex_sql::factory();
+		$del->setQuery('DELETE FROM ' . rex::getTablePrefix() . 'redactor_profiles WHERE `id` = "'.$id.'"');
+		echo 'Profil wurde gelöscht'; //todo: translate
 	}
 ?>
