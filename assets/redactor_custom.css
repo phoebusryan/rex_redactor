@@ -1,0 +1,109 @@
+.re-icon {
+  font-family: 'FontAwesome';
+}
+.re-icon i:before {
+  position: relative;
+  font-size: 14px;
+}
+.re-video:before {
+  content: "\f16a";
+}
+.re-unorderedlist:before {
+  content: "\f0ca";
+}
+.re-undo:before {
+  content: "\f0e2";
+}
+.re-underline:before {
+  content: "\f0cd";
+}
+.re-textdirection:before {
+  content: "\e604";
+  font-family: 'RedactorFont';
+}
+.re-fontcolor:before {
+  content: "\e605";
+  font-family: 'RedactorFont';
+}
+.re-table:before {
+  content: "\f0ce";
+}
+.re-redo:before {
+  content: "\f01e";
+}
+.re-quote:before {
+  content: "\f10d";
+}
+.re-outdent:before {
+  content: "\f03b";
+}
+.re-orderedlist:before {
+  content: "\f0cb";
+}
+.re-link:before {
+  content: "\f0c1";
+}
+.re-horizontalrule:before {
+  content: "\e60c";
+  font-family: 'RedactorFont';
+}
+.re-italic:before {
+  content: "\f033";
+}
+.re-indent:before {
+  content: "\f03c";
+}
+.re-image:before {
+  content: "\f03e";
+}
+.re-fullscreen:before {
+  content: "\f065";
+}
+.re-normalscreen:before {
+  content: "\f066";
+}
+.re-formatting:before {
+  content: "\f1dd";
+}
+.re-fontsize:before {
+  content: "\f034";
+}
+.re-fontfamily:before {
+  content: "\f031";
+}
+.re-deleted:before {
+  content: "\f0cc";
+}
+.re-html:before {
+  content: "\f121";
+}
+.re-clips:before {
+  content: "\f009";
+}
+.re-bold:before {
+  content: "\f032";
+}
+.re-backcolor:before {
+  content: "\e619";
+  font-family: 'RedactorFont';
+}
+.re-file:before {
+  content: "\f0c6";
+}
+.re-alignright:before {
+  content: "\f038";
+}
+.re-alignment:before,
+.re-alignleft:before {
+  content: "\f036";
+}
+.re-alignjustify:before {
+  content: "\f039";
+}
+.re-aligncenter:before {
+  content: "\f037";
+}
+.re-gallery:before {
+  content: "\e61f";
+  font-family: 'RedactorFont';
+}
