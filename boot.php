@@ -1,6 +1,7 @@
 <?php
 	if (rex::isBackend()) {
 		rex_view::addCssFile($this->getAssetsUrl('redactor.css'));
+		rex_view::addCssFile($this->getAssetsUrl('redactor_custom.css'));
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 		
 		//Start - get redactor-profiles
@@ -39,10 +40,6 @@
 								
 								$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
 							//End - explode parameters
-							
-//							echo '<pre>'.print_r($params,true).'</pre>';
-							
-//							$redactorConfig[] =  $matches[1].': [\''.(implode('\',\'', explode('|', $matches[2]))).'\'],';
 							
 							if (in_array($matches[1], ['clips','fontcolor','fontfamily','fontsize','textexpander'])) {
 								$redactorPlugins[] = $matches[1];
@@ -96,7 +93,7 @@
 			rex_view::addCssFile($this->getAssetsUrl('cache/custom_css.css'));
 		//End - include custom css
 	
-		//Start use OUTPUT_FILTER-EP to use an custom callback
+		//Start - use OUTPUT_FILTER-EP to use an custom callback
 			rex_extension::register('OUTPUT_FILTER', function($param) {
 				$page = rex_request('page', 'string');
 				$opener_input_field = rex_request('opener_input_field', 'string');
@@ -116,6 +113,6 @@
 				
 				return $content;
 			});
-		//End use OUTPUT_FILTER-EP to use an custom callback
+		//End - use OUTPUT_FILTER-EP to use an custom callback
 	}
 ?>
