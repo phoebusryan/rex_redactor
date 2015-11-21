@@ -112,11 +112,29 @@
 							'<b>fullscreen</b><br>'.
 							$this->i18n('profiles_buttons_fullscreen').'<br>'.
 							'<br>'.
+							'<b>horizontalrule</b><br>'.
+							$this->i18n('profiles_buttons_horizontalrule').'<br>'.
+							'<br>'.
+							'<b>html</b><br>'.
+							$this->i18n('profiles_buttons_html').'<br>'.
+							'<br>'.
 							'<b>italic</b><br>'.
 							$this->i18n('profiles_buttons_italic').'<br>'.
 							'<br>'.
+							'<b>indent</b><br>'.
+							$this->i18n('profiles_buttons_indent').'<br>'.
+							'<br>'.
 							'<b>orderedlist</b><br>'.
 							$this->i18n('profiles_buttons_orderedlist').'<br>'.
+							'<br>'.
+							'<b>outdent</b><br>'.
+							$this->i18n('profiles_buttons_outdent').'<br>'.
+							'<br>'.
+							'<b>quote</b><br>'.
+							$this->i18n('profiles_buttons_quote').'<br>'.
+							'<br>'.
+							'<b>redo</b><br>'.
+							$this->i18n('profiles_buttons_redo').'<br>'.
 							'<br>'.
 							'<b>rex_linkmap</b><br>'.
 							$this->i18n('profiles_buttons_rex_linkmap').'<br>'.
@@ -138,6 +156,9 @@
 							'<br>'.
 							'<b>underline</b><br>'.
 							$this->i18n('profiles_buttons_underline').'<br>'.
+							'<br>'.
+							'<b>undo</b><br>'.
+							$this->i18n('profiles_buttons_undo').'<br>'.
 							'<br>'.
 							'<b>unorderedlist</b><br>'.
 							$this->i18n('profiles_buttons_unorderedlist').'<br>'.
