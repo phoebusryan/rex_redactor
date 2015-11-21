@@ -130,12 +130,9 @@
 							'<b>outdent</b><br>'.
 							$this->i18n('profiles_buttons_outdent').'<br>'.
 							'<br>'.
-							'<b>quote</b><br>'.
-							$this->i18n('profiles_buttons_quote').'<br>'.
-							'<br>'.
-							'<b>redo</b><br>'.
-							$this->i18n('profiles_buttons_redo').'<br>'.
-							'<br>'.
+//							'<b>redo</b><br>'.
+//							$this->i18n('profiles_buttons_redo').'<br>'.
+//							'<br>'.
 							'<b>rex_linkmap</b><br>'.
 							$this->i18n('profiles_buttons_rex_linkmap').'<br>'.
 							'<br>'.
@@ -157,9 +154,9 @@
 							'<b>underline</b><br>'.
 							$this->i18n('profiles_buttons_underline').'<br>'.
 							'<br>'.
-							'<b>undo</b><br>'.
-							$this->i18n('profiles_buttons_undo').'<br>'.
-							'<br>'.
+//							'<b>undo</b><br>'.
+//							$this->i18n('profiles_buttons_undo').'<br>'.
+//							'<br>'.
 							'<b>unorderedlist</b><br>'.
 							$this->i18n('profiles_buttons_unorderedlist').'<br>'.
 							'<br>'.
