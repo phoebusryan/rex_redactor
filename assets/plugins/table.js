@@ -160,7 +160,7 @@
 				this.observe.addButton('td', 'table');
 				this.observe.addButton('th', 'table');
 
-				var button = this.button.addBefore('link', 'table', this.lang.get('table'));
+				var button = this.button.add('table', this.lang.get('table'));
 				this.button.addDropdown(button, dropdown);
 			},
 			show: function()
