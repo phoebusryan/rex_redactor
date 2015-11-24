@@ -84,34 +84,19 @@
 						&nbsp;
 					</dt>
 					<dd>
-						<p><a href="javascript:void(0);" onclick="$(\'#rex-redactor-help\').toggle(\'fast\');">Zeige/verberge Hilfe</a></p>
-						<div id="rex-redactor-help" style="display:none">'.
+						<p><a href="javascript:void(0);" onclick="$(\'#rex-redactor-buttons-help\').toggle(\'fast\');">Zeige/verberge Hilfe</a></p>
+						<div id="rex-redactor-buttons-help" style="display:none">'.
 							'<b>alignment</b><br>'.
 							$this->i18n('profiles_buttons_alignment').'<br>'.
 							'<br>'.
 							'<b>bold</b><br>'.
 							$this->i18n('profiles_buttons_bold').'<br>'.
 							'<br>'.
-							'<b>clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2]</b><br>'.
-							$this->i18n('profiles_buttons_clips').'<br>'.
-							'<br>'.
 							'<b>deleted</b><br>'.
 							$this->i18n('profiles_buttons_deleted').'<br>'.
 							'<br>'.
-							'<b>fontcolor[#ffffff|#000000]</b><br>'.
-							$this->i18n('profiles_buttons_fontcolor').'<br>'.
-							'<br>'.
-							'<b>fontfamily[arial|times]</b><br>'.
-							$this->i18n('profiles_buttons_fontfamily').'<br>'.
-							'<br>'.
-							'<b>fontsize[10|12|14]</b><br>'.
-							$this->i18n('profiles_buttons_fontsize').'<br>'.
-							'<br>'.
 							'<b>formatting[h1|p]</b><br>'.
 							$this->i18n('profiles_buttons_formatting').'<br>'.
-							'<br>'.
-							'<b>fullscreen</b><br>'.
-							$this->i18n('profiles_buttons_fullscreen').'<br>'.
 							'<br>'.
 							'<b>horizontalrule</b><br>'.
 							$this->i18n('profiles_buttons_horizontalrule').'<br>'.
@@ -131,38 +116,65 @@
 							'<b>outdent</b><br>'.
 							$this->i18n('profiles_buttons_outdent').'<br>'.
 							'<br>'.
-//							'<b>redo</b><br>'.
-//							$this->i18n('profiles_buttons_redo').'<br>'.
-//							'<br>'.
-							'<b>rex_linkmap</b><br>'.
-							$this->i18n('profiles_buttons_rex_linkmap').'<br>'.
-							'<br>'.
-							'<b>rex_mediapool_image</b><br>'.
-							$this->i18n('profiles_buttons_rex_mediapool_image').'<br>'.
-							'<br>'.
-							'<b>rex_mediapool_link</b><br>'.
-							$this->i18n('profiles_buttons_rex_mediapool_link').'<br>'.
-							'<br>'.
-							'<b>table</b><br>'.
-							$this->i18n('profiles_buttons_table').'<br>'.
-							'<br>'.
-							'<b>textdirection</b><br>'.
-							$this->i18n('profiles_buttons_textdirection').'<br>'.
-							'<br>'.
-							'<b>textexpander[Lorem=Lorem ipsum|Duis=Duis aute]</b><br>'.
-							$this->i18n('profiles_buttons_textexpander').'<br>'.
-							'<br>'.
 							'<b>underline</b><br>'.
 							$this->i18n('profiles_buttons_underline').'<br>'.
 							'<br>'.
-//							'<b>undo</b><br>'.
-//							$this->i18n('profiles_buttons_undo').'<br>'.
-//							'<br>'.
 							'<b>unorderedlist</b><br>'.
 							$this->i18n('profiles_buttons_unorderedlist').'<br>'.
+							'
+						</div>
+					</dd>
+				</dl>
+			');
+		//End - add redactor_buttons-field
+		
+		//Start - add redactor_buttons-field
+			$field = $form->addTextAreaField('redactor_plugins');
+			$field->setLabel($this->i18n('profiles_label_redactorplugins'));
+			
+			$field = $form->addRawField('
+				<dl class="rex-form-group form-group">
+					<dt>
+						&nbsp;
+					</dt>
+					<dd>
+						<p><a href="javascript:void(0);" onclick="$(\'#rex-redactor-plugins-help\').toggle(\'fast\');">Zeige/verberge Hilfe</a></p>
+						<div id="rex-redactor-plugins-help" style="display:none">'.
+							'<b>clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2]</b><br>'.
+							$this->i18n('profiles_plugins_clips').'<br>'.
+							'<br>'.
+							'<b>fontcolor[#ffffff|#000000]</b><br>'.
+							$this->i18n('profiles_plugins_fontcolor').'<br>'.
+							'<br>'.
+							'<b>fontfamily[arial|times]</b><br>'.
+							$this->i18n('profiles_plugins_fontfamily').'<br>'.
+							'<br>'.
+							'<b>fontsize[10|12|14]</b><br>'.
+							$this->i18n('profiles_plugins_fontsize').'<br>'.
+							'<br>'.
+							'<b>fullscreen</b><br>'.
+							$this->i18n('profiles_plugins_fullscreen').'<br>'.
+							'<br>'.
+							'<b>rex_linkmap</b><br>'.
+							$this->i18n('profiles_plugins_rex_linkmap').'<br>'.
+							'<br>'.
+							'<b>rex_mediapool_image</b><br>'.
+							$this->i18n('profiles_plugins_rex_mediapool_image').'<br>'.
+							'<br>'.
+							'<b>rex_mediapool_link</b><br>'.
+							$this->i18n('profiles_plugins_rex_mediapool_link').'<br>'.
+							'<br>'.
+							'<b>table</b><br>'.
+							$this->i18n('profiles_plugins_table').'<br>'.
+							'<br>'.
+							'<b>textdirection</b><br>'.
+							$this->i18n('profiles_plugins_textdirection').'<br>'.
+							'<br>'.
+							'<b>textexpander[Lorem=Lorem ipsum|Duis=Duis aute]</b><br>'.
+							$this->i18n('profiles_plugins_textexpander').'<br>'.
 							'<br>'.
 							'<b>video</b><br>'.
-							$this->i18n('profiles_buttons_video').'<br>'.
+							$this->i18n('profiles_plugins_video').'<br>'.
 							'
 						</div>
 					</dd>

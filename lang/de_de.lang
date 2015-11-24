@@ -20,31 +20,33 @@ rex_redactor_profiles_label_name = Name
 rex_redactor_profiles_label_description = Beschreibung
 rex_redactor_profiles_label_language = Sprache
 rex_redactor_profiles_label_redactorbuttons = Redactor-Buttons
+rex_redactor_profiles_label_redactorplugins = Redactor-Plugins
 
 rex_redactor_profiles_buttons_alignment = Setzt die Ausrichtung des markierten Texts
 rex_redactor_profiles_buttons_bold = Macht den markierten Text fett
-rex_redactor_profiles_buttons_clips = Fügt vordefinierte Textsnippets ein
 rex_redactor_profiles_buttons_deleted = Streicht den markierten Text durch
-rex_redactor_profiles_buttons_fontcolor = Definiert die Schriftfarbe
-rex_redactor_profiles_buttons_fontfamily = Definiert die Schriftart
-rex_redactor_profiles_buttons_fontsize = Definiert die Schriftgrösse
 rex_redactor_profiles_buttons_formatting = Definiert die Formatierung
-rex_redactor_profiles_buttons_fullscreen = Ermöglicht Vollbild
 rex_redactor_profiles_buttons_horizontalrule = Fügt eine horizontale Linie ein
 rex_redactor_profiles_buttons_html = Wechselt in den HTML-Modus
 rex_redactor_profiles_buttons_indent = Vergrössert den Einzug
 rex_redactor_profiles_buttons_italic = Macht den markierten Text kursiv
 rex_redactor_profiles_buttons_orderedlist = Füge eine sortierte Liste ein
 rex_redactor_profiles_buttons_outdent = Verkleinert den Einzug
-rex_redactor_profiles_buttons_rex_linkmap = Fügt einen Link aus der Linkmap ein
-rex_redactor_profiles_buttons_rex_mediapool_image = Fügt Bilder aus dem Medienpool ein
-rex_redactor_profiles_buttons_rex_mediapool_link = Fügt einen Link aus dem Medienpool ein
-rex_redactor_profiles_buttons_table = Fügt Tabellen ein
-rex_redactor_profiles_buttons_textdirection = Legt die Textausrichtung fest
-rex_redactor_profiles_buttons_textexpander = Vervollständigt vordefinierte Texte
 rex_redactor_profiles_buttons_underline = Unterstreicht den markierten Text
 rex_redactor_profiles_buttons_unorderedlist = Füge eine unsortierte Liste ein
-rex_redactor_profiles_buttons_video = Fügt ein Video ein
+
+rex_redactor_profiles_plugins_clips = Fügt vordefinierte Textsnippets ein
+rex_redactor_profiles_plugins_fontcolor = Definiert die Schriftfarbe
+rex_redactor_profiles_plugins_fontfamily = Definiert die Schriftart
+rex_redactor_profiles_plugins_fontsize = Definiert die Schriftgrösse
+rex_redactor_profiles_plugins_fullscreen = Ermöglicht Vollbild
+rex_redactor_profiles_plugins_rex_linkmap = Fügt einen Link aus der Linkmap ein
+rex_redactor_profiles_plugins_rex_mediapool_image = Fügt Bilder aus dem Medienpool ein
+rex_redactor_profiles_plugins_rex_mediapool_link = Fügt einen Link aus dem Medienpool ein
+rex_redactor_profiles_plugins_table = Fügt Tabellen ein
+rex_redactor_profiles_plugins_textdirection = Legt die Textausrichtung fest
+rex_redactor_profiles_plugins_textexpander = Vervollständigt vordefinierte Texte
+rex_redactor_profiles_plugins_video = Fügt ein Video ein
 
 #permissions
 perm_general_rex_redactor[] = Rechte für Redactor-Addon
