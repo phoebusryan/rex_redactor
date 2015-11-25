@@ -16,9 +16,9 @@
 					dropdown['s' + i] = { title: s, func: function() { that.fontfamily.set(s); }};
 				});
 
-				dropdown.remove = { title: 'Remove Font Family', func: that.fontfamily.reset };
+				dropdown.remove = { title: this.lang.get('remove_fontfamily'), func: that.fontfamily.reset };
 
-				var button = this.button.add('fontfamily', 'Change Font Family');
+				var button = this.button.add('fontfamily', this.lang.get('fontfamily'));
 				this.button.addDropdown(button, dropdown);
 
 			},

@@ -8,10 +8,10 @@
 				var that = this;
 				var dropdown = {};
 
-				dropdown.ltr = { title: 'Left to Right', func: that.textdirection.setLtr };
-				dropdown.rtl = { title: 'Right to Left', func: that.textdirection.setRtl};
+				dropdown.ltr = { title: this.lang.get('textdirection_ltr'), func: that.textdirection.setLtr };
+				dropdown.rtl = { title: this.lang.get('textdirection_rtl'), func: that.textdirection.setRtl };
 
-				var button = this.button.add('textdirection', 'Change Text Direction');
+				var button = this.button.add('textdirection', this.lang.get('textdirection'));
 				this.button.addDropdown(button, dropdown);
 			},
 			setRtl: function()
