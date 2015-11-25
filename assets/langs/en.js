@@ -62,6 +62,7 @@ $.Redactor.opts.langs['en'] = {
 	align_right: 'Align text to the right',
 	align_justify: 'Justify text',
 	horizontalrule: 'Insert Horizontal Rule',
+	fullscreen: 'Fullscreen',
 	deleted: 'Deleted',
 	anchor: 'Anchor',
 	link_new_tab: 'Open link in new tab',
@@ -70,6 +71,13 @@ $.Redactor.opts.langs['en'] = {
 	filename: 'Name (optional)',
 	edit: 'Edit',
 	center: 'Center',
-	upload_label: 'Drop file here or '
+	upload_label: 'Drop file here or ',
+	fontsize: 'Fontsize',
+	remove_fontsize: 'Remove fontsize',
+	fontfamily: 'Fontfamily',
+	remove_fontfamily: 'Remove fontfamily',
+	textdirection: 'Textdirection',
+	textdirection_ltr: 'Left to Right',
+	textdirection_trl: 'Right to Left',
 };
 })( jQuery );
