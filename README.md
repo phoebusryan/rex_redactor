@@ -11,6 +11,3 @@ Peter Bickel hat die Entwicklerlizenz spendiert!
 
 Bekannte Bugs:
 - Profil löschen fehlerhaft
-
-Zukünftige Features:
-- Undo / Redo
