@@ -78,6 +78,6 @@ $.Redactor.opts.langs['de'] = {
 	remove_fontfamily: 'Schriftart entfernen',
 	textdirection: 'Schreibrichtung',
 	textdirection_ltr: 'Links nach Rechts',
-	textdirection_rtl: 'Rechts nach Links',
+	textdirection_rtl: 'Rechts nach Links'
 };
 })( jQuery );

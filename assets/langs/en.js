@@ -78,6 +78,6 @@ $.Redactor.opts.langs['en'] = {
 	remove_fontfamily: 'Remove fontfamily',
 	textdirection: 'Textdirection',
 	textdirection_ltr: 'Left to Right',
-	textdirection_trl: 'Right to Left',
+	textdirection_trl: 'Right to Left'
 };
 })( jQuery );
