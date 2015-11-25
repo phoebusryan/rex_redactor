@@ -10,7 +10,6 @@ Peter Bickel hat die Entwicklerlizenz spendiert!
 ---
 
 Bekannte Bugs:
-- Sortierung der Buttons stimmt nicht immer
 - Profil löschen fehlerhaft
 
 Zukünftige Features:
