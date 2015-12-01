@@ -10,13 +10,23 @@
 			unset($sql);
 			
 			$jsCode = [];
-			$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
+			
+			$jsCode[] = 'var redactorSetup = false;';
+			$jsCode[] = 'function redactorInit() {';
+			
 			foreach ($profiles as $profile) {
 				rex_view::addJsFile($this->getAssetsUrl('langs/'.$profile['language'].'.js'));
 				
 				$redactorConfig = [];
 				
+				$jsCode[] = 'if (redactorSetup == true) {';
+				$jsCode[] = '  $(\'.redactorEditor-'.$profile['name'].'\').redactor(\'core.destroy\');';
+				$jsCode[] = '}';
 				$jsCode[] = '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
+				$jsCode[] = '  initCallback: function() {';
+				$jsCode[] = '    redactorSetup = true;';
+				$jsCode[] = '  },';
+				
 				$jsCode[] = '  lang: \''.$profile['language'].'\',';
 				
 				//Start - get buttonconfiguration
@@ -81,6 +91,10 @@
 				
 				$jsCode[] = '});';
 			}
+			$jsCode[] = '}';
+			
+			$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
+			$jsCode[] = '  redactorInit();';
 			$jsCode[] = '});';
 			
 			if (!rex_file::put(rex_path::addonAssets('rex_redactor', 'cache/redactor_profiles.js').'', implode(PHP_EOL, $jsCode))) {
