@@ -20,7 +20,7 @@
 				$redactorConfig = [];
 				
 				$jsCode[] = 'if (redactorSetup == true) {';
-				$jsCode[] = '  $(\'.redactorEditor-'.$profile['name'].'\').redactor(\'core.destroy\');';
+//				$jsCode[] = '  $(\'.redactorEditor-'.$profile['name'].'\').redactor(\'core.destroy\');';
 				$jsCode[] = '}';
 				$jsCode[] = '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
 				$jsCode[] = '  initCallback: function() {';
