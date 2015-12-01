@@ -6,6 +6,7 @@ supportpage: www.redaxo.org/de/forum/
 page:
     title: 'translate:title'
     perm: rex_redactor[]
+    pjax: true
     subpages:
         tutorial: { title: 'translate:tutorial', perm: rex_redactor[tutorial] }
         profiles: { title: 'translate:profiles', perm: rex_redactor[profiles] }
