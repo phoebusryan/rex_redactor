@@ -13,16 +13,21 @@
 			
 			$jsCode[] = 'var redactorSetup = false;';
 			$jsCode[] = 'function redactorInit() {';
+			$jsCode[] = 'var Editor = null;';
 			
 			foreach ($profiles as $profile) {
 				rex_view::addJsFile($this->getAssetsUrl('langs/'.$profile['language'].'.js'));
-				
+				$jsCode[] = 'var Editor = $(\'.redactorEditor-'.$profile['name'].'\');';
+
 				$redactorConfig = [];
 				
-				$jsCode[] = 'if (redactorSetup == true) {';
-//				$jsCode[] = '  $(\'.redactorEditor-'.$profile['name'].'\').redactor(\'core.destroy\');';
+				$jsCode[] = 'if (redactorSetup == true && Editor.parent().is(\'.redactor-box\')) {';
+				$jsCode[] = '  Editor.each(function() {';
+				$jsCode[] = '    $(this).insertBefore($(this).parent()).next().remove();';
+				// $jsCode[] = '    $(this).redactor(\'core.destroy\');';
+				$jsCode[] = '  });';
 				$jsCode[] = '}';
-				$jsCode[] = '$(\'.redactorEditor-'.$profile['name'].'\').redactor({';
+				$jsCode[] = 'Editor.redactor({';
 				$jsCode[] = '  initCallback: function() {';
 				$jsCode[] = '    redactorSetup = true;';
 				$jsCode[] = '  },';
