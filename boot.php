@@ -24,7 +24,6 @@
 				$jsCode[] = 'if (redactorSetup == true && Editor.parent().is(\'.redactor-box\')) {';
 				$jsCode[] = '  Editor.each(function() {';
 				$jsCode[] = '    $(this).insertBefore($(this).parent()).next().remove();';
-				// $jsCode[] = '    $(this).redactor(\'core.destroy\');';
 				$jsCode[] = '  });';
 				$jsCode[] = '}';
 				$jsCode[] = 'Editor.redactor({';
