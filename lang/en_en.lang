@@ -5,7 +5,7 @@ rex_redactor_tutorial = Explanation
 rex_redactor_tutorial_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
 
 #subpage profiles
-rex_redactor_profiles = Profile
+rex_redactor_profiles = Profiles
 rex_redactor_profiles_norowsmessage = No profile found
 
 rex_redactor_profiles_column_name = Name
