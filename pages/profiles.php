@@ -2,7 +2,7 @@
 	$func = rex_request('func', 'string');
 	
 	if ($func == '') {
-		$list = rex_list::factory("SELECT `id`, `name`, `description`, `language` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC");
+		$list = rex_list::factory("SELECT `id`, `name`, `description` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC");
 		$list->addTableAttribute('class', 'table-striped');
 		$list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
 		
@@ -14,7 +14,6 @@
 		
 		$list->setColumnLabel('name', $this->i18n('profiles_column_name'));
 		$list->setColumnLabel('description', $this->i18n('profiles_column_description'));
-		$list->setColumnLabel('language', $this->i18n('profiles_column_language'));
 		
 		// functions column spans 2 data-columns
 		$funcs = $this->i18n('profiles_column_functions');
