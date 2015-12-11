@@ -6,6 +6,7 @@
 
 .redactor-editor {
 	border-top:0px;
+	min-height:250px;
 }
 
 .redactor-toolbar li {
