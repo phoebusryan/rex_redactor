@@ -4,9 +4,14 @@
 		rex_view::addCssFile($this->getAssetsUrl('redactor_custom.css'));
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 		
+		$redactorLanguage = rex::getProperty('lang');
+		$redactorLanguage = substr($redactorLanguage, 0, 2);
+		
+		rex_view::addJsFile($this->getAssetsUrl('langs/'.$redactorLanguage.'.js'));
+		
 		//Start - get redactor-profiles
 			$sql = rex_sql::factory();
-			$profiles = $sql->setQuery("SELECT `name`, `language`, `redactor_buttons`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC")->getArray();
+			$profiles = $sql->setQuery("SELECT `name`, `redactor_buttons`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor_profiles` ORDER BY `name` ASC")->getArray();
 			unset($sql);
 			
 			$jsCode = [];
@@ -16,7 +21,6 @@
 			$jsCode[] = 'var Editor = null;';
 			
 			foreach ($profiles as $profile) {
-				rex_view::addJsFile($this->getAssetsUrl('langs/'.$profile['language'].'.js'));
 				$jsCode[] = 'var Editor = $(\'.redactorEditor-'.$profile['name'].'\');';
 
 				$redactorConfig = [];
@@ -31,7 +35,7 @@
 				$jsCode[] = '    redactorSetup = true;';
 				$jsCode[] = '  },';
 				
-				$jsCode[] = '  lang: \''.$profile['language'].'\',';
+				$jsCode[] = '  lang: \''.$redactorLanguage.'\',';
 				
 				//Start - get buttonconfiguration
 					$redactorButtons = [];
