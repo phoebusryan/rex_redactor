@@ -39,56 +39,63 @@
 				
 				//Start - get buttonconfiguration
 					$redactorButtons = [];
-					$buttons = explode(',', $profile['redactor_buttons']);
-					foreach ($buttons as $button) {
-						if (preg_match('/(.*)\[(.*)\]/', $button, $matches)) {
-							//Start - explode parameters
-								$parameters = explode('|', $matches[2]);
-								$parameterString = '';
-								foreach ($parameters as $parameter) {
-									if (strpos($parameter, '=') !== false) {
-										list($key, $value) = explode('=',$parameter);
-										$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
-									} else {
-										$parameterString .= "'".$parameter."',";
+					
+					if (trim($profile['redactor_buttons']) != '') {
+						$buttons = explode(',', $profile['redactor_buttons']);
+						
+						foreach ($buttons as $button) {
+							if (preg_match('/(.*)\[(.*)\]/', $button, $matches)) {
+								//Start - explode parameters
+									$parameters = explode('|', $matches[2]);
+									$parameterString = '';
+									foreach ($parameters as $parameter) {
+										if (strpos($parameter, '=') !== false) {
+											list($key, $value) = explode('=',$parameter);
+											$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
+										} else {
+											$parameterString .= "'".$parameter."',";
+										}
 									}
-								}
+									
+									$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
+								//End - explode parameters
 								
-								$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
-							//End - explode parameters
-							
-							$redactorButtons[] = $matches[1];
-						} else {
-							$redactorButtons[] = $button;
+								$redactorButtons[] = $matches[1];
+							} else {
+								$redactorButtons[] = $button;
+							}
 						}
 					}
 				//End - get buttonconfiguration
 				
 				//Start - get pluginconfiguration
 					$redactorPlugins = [];
-					$plugins = explode(',', $profile['redactor_plugins']);
-					foreach ($plugins as $plugin) {
-						if (preg_match('/(.*)\[(.*)\]/', $plugin, $matches)) {
-							//Start - explode parameters
-								$parameters = explode('|', $matches[2]);
-								$parameterString = '';
-								foreach ($parameters as $parameter) {
-									if (strpos($parameter, '=') !== false) {
-										list($key, $value) = explode('=',$parameter);
-										$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
-									} else {
-										$parameterString .= "'".$parameter."',";
+					
+					if (trim($profile['redactor_plugins']) != '') {
+						$plugins = explode(',', $profile['redactor_plugins']);
+						foreach ($plugins as $plugin) {
+							if (preg_match('/(.*)\[(.*)\]/', $plugin, $matches)) {
+								//Start - explode parameters
+									$parameters = explode('|', $matches[2]);
+									$parameterString = '';
+									foreach ($parameters as $parameter) {
+										if (strpos($parameter, '=') !== false) {
+											list($key, $value) = explode('=',$parameter);
+											$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
+										} else {
+											$parameterString .= "'".$parameter."',";
+										}
 									}
-								}
+									
+									$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
+								//End - explode parameters
 								
-								$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
-							//End - explode parameters
-							
-							$redactorPlugins[] = $matches[1];
-							rex_view::addJsFile($this->getAssetsUrl('plugins/'.$matches[1].'.js'));
-						} else {
-							$redactorPlugins[] = $plugin;
-							rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugin.'.js'));
+								$redactorPlugins[] = $matches[1];
+								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$matches[1].'.js'));
+							} else {
+								$redactorPlugins[] = $plugin;
+								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugin.'.js'));
+							}
 						}
 					}
 				//End - get pluginconfiguration
