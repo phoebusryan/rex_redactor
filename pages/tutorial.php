@@ -6,7 +6,7 @@
 	$code .= '  <div class="form-group">'.PHP_EOL;
 	$code .= '    <label class="col-sm-2 control-label" for="redactor_1">VALUE 1</label>'.PHP_EOL;
 	$code .= '    <div class="col-sm-10">'.PHP_EOL;
-	$code .= '      <textarea cols="1" rows="6" class="form-control redactorEditor-full" id="redactor_1" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>'.PHP_EOL;
+	$code .= '      <textarea class="form-control redactorEditor-full" id="redactor_1" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>'.PHP_EOL;
 	$code .= '    </div>'.PHP_EOL;
 	$code .= '  </div>'.PHP_EOL;
 	$code .= '</fieldset>'.PHP_EOL;
