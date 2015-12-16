@@ -16,6 +16,12 @@ $.Redactor.prototype.rex_linkmap = function() {
 			this.selection.restore();
 			var selectedText = this.selection.getText();
 			
+			if (this.opts.urltype == 'relative') {
+				url = url;
+			} else if (this.opts.urltype == 'absolute') {
+				url = window.location.origin + '/' + url;
+			}
+			
 			var html = '<a href="' + url + '" title="'+title+'">' + ((selectedText != '') ? selectedText : title) + '</a>';
 			this.insert.html(html);
 		}

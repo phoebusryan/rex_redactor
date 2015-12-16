@@ -18,7 +18,9 @@ rex_redactor_profiles_formcaption_edit = Profil editieren
 
 rex_redactor_profiles_label_name = Name
 rex_redactor_profiles_label_description = Beschreibung
-rex_redactor_profiles_label_language = Sprache
+rex_redactor_profiles_label_urltype = URL-Art
+rex_redactor_profiles_label_urltype_option_relative = Relativ
+rex_redactor_profiles_label_urltype_option_absolute = Absolut
 rex_redactor_profiles_label_redactorbuttons = Redactor-Buttons
 rex_redactor_profiles_label_redactorplugins = Redactor-Plugins
 

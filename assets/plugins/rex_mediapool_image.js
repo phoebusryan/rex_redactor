@@ -11,7 +11,14 @@ $.Redactor.prototype.rex_mediapool_image = function() {
 			newPoolWindow('index.php?page=mediapool/media&opener_input_field='+redactorFieldID);
 		},
 		selectMedia: function(filename, title) {
-			var html = '<img src="index.php?rex_media_type=redactorImage&rex_media_file=' + filename + '" alt="'+title+'">';
+			
+			if (this.opts.urltype == 'relative') {
+				url = 'index.php?rex_media_type=redactorImage&rex_media_file=' + filename;
+			} else if (this.opts.urltype == 'absolute') {
+				url = window.location.origin + '/' + 'index.php?rex_media_type=redactorImage&rex_media_file=' + filename;
+			}
+			
+			var html = '<img src="'+url+'" alt="'+title+'">';
 			this.insert.html(html);
 		}
 	};

@@ -56,6 +56,16 @@
 			$field->setLabel($this->i18n('profiles_label_description'));
 		//End - add description-field
 		
+		//Start - add urltype-field
+			$field = $form->addSelectField('urltype');
+			$field->setLabel($this->i18n('profiles_label_urltype'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_urltype_option_relative'), 'relative');
+			$select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
+		//End - add urltype-field
+		
 		//Start - add redactor_buttons-field
 			$field = $form->addTextAreaField('redactor_buttons');
 			$field->setLabel($this->i18n('profiles_label_redactorbuttons'));
