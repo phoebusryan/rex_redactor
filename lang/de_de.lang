@@ -40,6 +40,7 @@ rex_redactor_profiles_plugins_fontcolor_description = Definiert die Schriftfarbe
 rex_redactor_profiles_plugins_fontfamily_description = Definiert die Schriftart
 rex_redactor_profiles_plugins_fontsize_description = Definiert die Schriftgrösse
 rex_redactor_profiles_plugins_fullscreen_description = Ermöglicht Vollbild
+rex_redactor_profiles_plugins_limiter_description = Limitiert die Anzahl Zeichen, die eingegeben werden können
 rex_redactor_profiles_plugins_rex_linkmap_description = Fügt einen Link aus der Linkmap ein
 rex_redactor_profiles_plugins_rex_mediapool_image_description = Fügt Bilder aus dem Medienpool ein
 rex_redactor_profiles_plugins_rex_mediapool_link_description = Fügt einen Link aus dem Medienpool ein

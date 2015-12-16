@@ -9,7 +9,10 @@ CREATE TABLE IF NOT EXISTS `%TABLE_PREFIX%redactor_profiles` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 INSERT INTO `%TABLE_PREFIX%redactor_profiles` (`id`, `name`, `description`, `redactor_buttons`, `redactor_plugins`) VALUES
-(1, 'full', 'Standard Redactor-Konfiguration', 'alignment,bold,deleted,formatting[h1|p],horizontalrule,html,italic,indent,orderedlist,outdent,underline,unorderedlist', 'clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2],fontcolor[#ffffff|#000000],fontfamily[arial|times],fontsize[10|12|14],fullscreen,rex_linkmap,rex_mediapool_image,rex_mediapool_link,table,textdirection,video');
+(1, 'full', 'Standard Redactor-Konfiguration', 'alignment,bold,deleted,formatting[h1|p],horizontalrule,html,italic,indent,orderedlist,outdent,underline,unorderedlist', 'clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2],fontcolor[#ffffff|#000000],fontfamily[arial|times],fontsize[10|12|14],fullscreen,limiter[20],rex_linkmap,rex_mediapool_image,rex_mediapool_link,table,textdirection,video');
 
 ALTER TABLE `%TABLE_PREFIX%redactor_profiles`
  ADD PRIMARY KEY (`id`);
+ 
+ALTER TABLE `%TABLE_PREFIX%redactor_profiles`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
