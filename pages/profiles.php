@@ -56,23 +56,6 @@
 			$field->setLabel($this->i18n('profiles_label_description'));
 		//End - add description-field
 		
-		//Start - add language-field
-			$field = $form->addSelectField('language');
-			$field->setLabel($this->i18n('profiles_label_language'));
-			
-			$select = $field->getSelect();
-			$select->setSize(1);
-			$select->addOption('---', 0);
-			
-			//Start - get all languages from the assets-folder
-				$languages = glob(rex_path::addonAssets('rex_redactor', 'langs').'/*.js');
-				foreach ($languages as $language) {
-					$language = substr($language, strlen(rex_path::addonAssets('rex_redactor', 'langs')) +1, -3);
-					$select->addOption($language, $language);
-				}
-			//End - get all languages from the assets-folder
-		//End - add language-field
-		
 		//Start - add redactor_buttons-field
 			$field = $form->addTextAreaField('redactor_buttons');
 			$field->setLabel($this->i18n('profiles_label_redactorbuttons'));
@@ -153,6 +136,9 @@
 							'<br>'.
 							'<b>fullscreen</b><br>'.
 							$this->i18n('profiles_plugins_fullscreen_description').'<br>'.
+							'<br>'.
+							'<b>limiter[20]</b><br>'.
+							$this->i18n('profiles_plugins_limiter_description').'<br>'.
 							'<br>'.
 							'<b>rex_linkmap</b><br>'.
 							$this->i18n('profiles_plugins_rex_linkmap_description').'<br>'.
