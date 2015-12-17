@@ -14,19 +14,21 @@
 	$fragment = new rex_fragment();
 	$fragment->setVar('class', 'info', false);
 	$fragment->setVar('title', 'Beispiel: Module Input', false); //todo
-	$fragment->setVar('body', highlight_string($code, true), false);
+	$fragment->setVar('body', rex_string::highlight($code), false);
 	echo $fragment->parse('core/page/section.php');
 	
 	///
 	
 	$code = '';
 	$code .= '<?php'.PHP_EOL;
-	$code .= '  rex_redactor::insertProfile(\'simple\', \'beschreibung\', \'bold,italic\', \'table\');'.PHP_EOL;
-	$code .= '?>'.PHP_EOL;
+	$code .= '  if (!rex_redactor::profileExists(\'simple\')) {'.PHP_EOL;
+	$code .= '    rex_redactor::insertProfile(\'simple\', \'Lorem Ipsum\', \'relative\', \'bold,italic\', \'table\');'.PHP_EOL;
+	$code .= '  }'.PHP_EOL;
+	$code .= '?>';
 	
 	$fragment = new rex_fragment();
 	$fragment->setVar('class', 'info', false);
 	$fragment->setVar('title', 'Beispiel: Via Modul oder AddOn ein Profil anlegen', false); //todo
-	$fragment->setVar('body', highlight_string($code, true), false);
+	$fragment->setVar('body', rex_string::highlight($code), false);
 	echo $fragment->parse('core/page/section.php');
 ?>
