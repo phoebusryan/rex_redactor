@@ -87,9 +87,6 @@
 							'<b>deleted</b><br>'.
 							$this->i18n('profiles_buttons_deleted_description').'<br>'.
 							'<br>'.
-							'<b>formatting[h1|p]</b><br>'.
-							$this->i18n('profiles_buttons_formatting_description').'<br>'.
-							'<br>'.
 							'<b>horizontalrule</b><br>'.
 							$this->i18n('profiles_buttons_horizontalrule_description').'<br>'.
 							'<br>'.
@@ -99,14 +96,8 @@
 							'<b>italic</b><br>'.
 							$this->i18n('profiles_buttons_italic_description').'<br>'.
 							'<br>'.
-							'<b>indent</b><br>'.
-							$this->i18n('profiles_buttons_indent_description').'<br>'.
-							'<br>'.
 							'<b>orderedlist</b><br>'.
 							$this->i18n('profiles_buttons_orderedlist_description').'<br>'.
-							'<br>'.
-							'<b>outdent</b><br>'.
-							$this->i18n('profiles_buttons_outdent_description').'<br>'.
 							'<br>'.
 							'<b>underline</b><br>'.
 							$this->i18n('profiles_buttons_underline_description').'<br>'.
@@ -147,8 +138,29 @@
 							'<b>fullscreen</b><br>'.
 							$this->i18n('profiles_plugins_fullscreen_description').'<br>'.
 							'<br>'.
+							'<b>heading1</b><br>'.
+							$this->i18n('profiles_plugins_heading1_description').'<br>'.
+							'<br>'.
+							'<b>heading2</b><br>'.
+							$this->i18n('profiles_plugins_heading2_description').'<br>'.
+							'<br>'.
+							'<b>heading3</b><br>'.
+							$this->i18n('profiles_plugins_heading3_description').'<br>'.
+							'<br>'.
+							'<b>heading4</b><br>'.
+							$this->i18n('profiles_plugins_heading4_description').'<br>'.
+							'<br>'.
+							'<b>heading5</b><br>'.
+							$this->i18n('profiles_plugins_heading5_description').'<br>'.
+							'<br>'.
+							'<b>heading6</b><br>'.
+							$this->i18n('profiles_plugins_heading6_description').'<br>'.
+							'<br>'.
 							'<b>limiter[20]</b><br>'.
 							$this->i18n('profiles_plugins_limiter_description').'<br>'.
+							'<br>'.
+							'<b>paragraph</b><br>'.
+							$this->i18n('profiles_plugins_paragraph_description').'<br>'.
 							'<br>'.
 							'<b>rex_linkmap</b><br>'.
 							$this->i18n('profiles_plugins_rex_linkmap_description').'<br>'.
