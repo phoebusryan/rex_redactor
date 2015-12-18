@@ -13,12 +13,16 @@
 
 				$.each(clips, function(i, s)
 				{
-					dropdown['s' + i] = {title: s[0], func: function() { that.clips.set(s[1]); }};
+					dropdown['s' + i] = {
+						title: s[0],
+						func: function() {
+							that.clips.set(s[1]);
+						}
+					};
 				});
-
+				
 				var button = this.button.add('clips', 'Clips');
 				this.button.addDropdown(button, dropdown);
-
 			},
 			set: function (value)
 			{
