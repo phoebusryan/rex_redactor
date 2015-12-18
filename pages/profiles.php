@@ -135,13 +135,13 @@
 							'<b>clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2]</b><br>'.
 							$this->i18n('profiles_plugins_clips_description').'<br>'.
 							'<br>'.
-							'<b>fontcolor[#ffffff|#000000]</b><br>'.
+							'<b>fontcolor[Weiss=#ffffff|Schwarz=#000000]</b><br>'.
 							$this->i18n('profiles_plugins_fontcolor_description').'<br>'.
 							'<br>'.
-							'<b>fontfamily[arial|times]</b><br>'.
+							'<b>fontfamily[Arial|Times]</b><br>'.
 							$this->i18n('profiles_plugins_fontfamily_description').'<br>'.
 							'<br>'.
-							'<b>fontsize[10|12|14]</b><br>'.
+							'<b>fontsize[12px|15pt|120%]</b><br>'.
 							$this->i18n('profiles_plugins_fontsize_description').'<br>'.
 							'<br>'.
 							'<b>fullscreen</b><br>'.
