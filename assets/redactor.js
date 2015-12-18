@@ -103,7 +103,7 @@
 	$.Redactor.opts = {
 
 		// settings
-		lang: 'en',
+		lang: '',
 		direction: 'ltr', // ltr or rtl
 
 		plugins: false, // array
@@ -179,8 +179,7 @@
 		toolbarOverflow: false,
 
 		source: true,
-		buttons: ['html', 'formatting', 'bold', 'italic', 'deleted', 'unorderedlist', 'orderedlist',
-				  'outdent', 'indent', 'image', 'file', 'link', 'alignment', 'horizontalrule'], // + 'underline'
+		buttons: [],
 
 		buttonsHide: [],
 		buttonsHideOnMobile: [],
