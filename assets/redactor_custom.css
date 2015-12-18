@@ -79,8 +79,7 @@
   font-family: 'RedactorFont';
 }
 .re-fontcolor:before {
-  content: "\e605";
-  font-family: 'RedactorFont';
+  content: "\f1fc";
 }
 .re-table:before {
   content: "\f0ce";
@@ -140,10 +139,6 @@
 .re-bold:before {
   content: "\f032";
 }
-.re-backcolor:before {
-  content: "\e619";
-  font-family: 'RedactorFont';
-}
 .re-file:before {
   content: "\f0c6";
 }
@@ -159,8 +154,4 @@
 }
 .re-aligncenter:before {
   content: "\f037";
-}
-.re-gallery:before {
-  content: "\e61f";
-  font-family: 'RedactorFont';
 }
