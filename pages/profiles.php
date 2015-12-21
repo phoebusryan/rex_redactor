@@ -123,6 +123,9 @@
 					<dd>
 						<p><a href="javascript:void(0);" onclick="$(\'#rex-redactor-plugins-help\').toggle(\'fast\');">Zeige/verberge Hilfe</a></p>
 						<div id="rex-redactor-plugins-help" style="display:none">'.
+							'<b>cleaner</b><br>'.
+							$this->i18n('profiles_plugins_cleaner_description').'<br>'.
+							'<br>'.
 							'<b>clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2]</b><br>'.
 							$this->i18n('profiles_plugins_clips_description').'<br>'.
 							'<br>'.

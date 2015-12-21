@@ -10,7 +10,7 @@ CREATE TABLE `%TABLE_PREFIX%redactor_profiles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `%TABLE_PREFIX%redactor_profiles` (`id`, `name`, `description`, `urltype`, `redactor_buttons`, `redactor_plugins`) VALUES
-(1, 'full', 'Standard Redactor-Konfiguration', 'relative', 'alignment,bold,deleted,horizontalrule,html,italic,orderedlist,underline,unorderedlist', 'clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2],fontcolor[Weiss=#ffffff|Schwarz=#000000],fontfamily[Arial|Times],fontsize[12px|15pt|120%],fullscreen,heading1,heading2,heading3,heading4,heading5,heading6,limiter[20],paragraph,rex_linkmap,rex_mediapool_image,rex_mediapool_link,table,textdirection,video');
+(1, 'full', 'Standard Redactor-Konfiguration', 'relative', 'alignment,bold,deleted,horizontalrule,html,italic,orderedlist,underline,unorderedlist', 'cleaner,clips[Snippetname1=Snippettext1|Snippetname2=Snippettext2],fontcolor[Weiss=#ffffff|Schwarz=#000000],fontfamily[Arial|Times],fontsize[12px|15pt|120%],fullscreen,heading1,heading2,heading3,heading4,heading5,heading6,limiter[20],paragraph,rex_linkmap,rex_mediapool_image,rex_mediapool_link,table,textdirection,video');
 
 ALTER TABLE `%TABLE_PREFIX%redactor_profiles`
   ADD PRIMARY KEY (`id`);

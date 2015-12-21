@@ -9,6 +9,7 @@ $.Redactor.opts.langs['en'] = {
 	link_edit: 'Edit link',
 	unlink: 'Unlink',
 	formatting: 'Formatting',
+	remove_formatting: 'Formatierung entfernen',
 	paragraph: 'Normal text',
 	quote: 'Quote',
 	code: 'Code',

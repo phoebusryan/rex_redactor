@@ -34,6 +34,7 @@ rex_redactor_profiles_buttons_orderedlist_description = Fügt eine sortierte Lis
 rex_redactor_profiles_buttons_underline_description = Unterstreicht den markierten Text
 rex_redactor_profiles_buttons_unorderedlist_description = Fügt eine unsortierte Liste ein
 
+rex_redactor_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
 rex_redactor_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
 rex_redactor_profiles_plugins_fontcolor_description = Definiert die Schriftfarbe
 rex_redactor_profiles_plugins_fontfamily_description = Definiert die Schriftart
