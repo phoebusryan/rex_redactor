@@ -81,7 +81,7 @@
 									$parameterString = '';
 									foreach ($parameters as $parameter) {
 										if (strpos($parameter, '=') !== false) {
-											list($key, $value) = explode('=',$parameter);
+											list($key, $value) = explode('=',$parameter,2);
 											$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
 										} else {
 											$parameterString .= "'".$parameter."',";
