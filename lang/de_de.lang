@@ -58,4 +58,4 @@ rex_redactor_profiles_plugins_video_description = Fügt ein Video ein
 #permissions
 perm_general_rex_redactor[] = Rechte für Redactor-Addon
 perm_general_rex_redactor[tutorial] = Rechte für die Seite 'Erklärung' des Redactor-Addons
-perm_general_rex_redactor[profles] = Rechte für die Seite 'Profile' des Redactor-Addons
+perm_general_rex_redactor[profiles] = Rechte für die Seite 'Profile' des Redactor-Addons
