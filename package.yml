@@ -1,12 +1,11 @@
 package: rex_redactor
-version: '1.5.9'
+version: '1.6.0'
 author: Thomas Kaegi
-supportpage: github.com/factorylabs/rex_redactor
+supportpage: github.com/phoebusryan/rex_redactor
 
 page:
     title: 'translate:title'
     perm: rex_redactor[]
     pjax: true
     subpages:
-        tutorial: { title: 'translate:tutorial', perm: rex_redactor[tutorial] }
         profiles: { title: 'translate:profiles', perm: rex_redactor[profiles] }
