@@ -92,10 +92,16 @@
 								//End - explode parameters
 								
 								$redactorPlugins[] = $matches[1];
-								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$matches[1].'.js'));
+								
+								if (!in_array($this->getAssetsUrl('plugins/'.$matches[1].'.js'), rex_view::getJsFiles())) {
+									rex_view::addJsFile($this->getAssetsUrl('plugins/'.$matches[1].'.js'));
+								}
 							} else {
 								$redactorPlugins[] = $plugin;
-								rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugin.'.js'));
+								
+								if (!in_array($this->getAssetsUrl('plugins/'.$plugin.'.js'), rex_view::getJsFiles())) {
+									rex_view::addJsFile($this->getAssetsUrl('plugins/'.$plugin.'.js'));
+								}
 							}
 						}
 					}
