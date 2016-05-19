@@ -12,6 +12,7 @@ $.Redactor.opts.langs['en'] = {
 	remove_formatting: 'Formatierung entfernen',
 	paragraph: 'Normal text',
 	quote: 'Quote',
+	blockquote: 'Quote',
 	code: 'Code',
 	header1: 'Header 1',
 	header2: 'Header 2',
