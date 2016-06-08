@@ -1,5 +1,7 @@
 rex_redactor_title = Redactor Editor
 
+rex_redactor_deprecated = Dieses Addon wird nicht mehr weiterentwickelt. Stattdessen gibt es im Installer das neue Addon "Redactor 2", welches stabiler, zuverlässiger und mit mehr Features ausgestattet ist.
+
 #subpage help
 rex_redactor_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
 
