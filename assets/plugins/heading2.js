@@ -7,7 +7,12 @@ $.Redactor.prototype.heading2 = function() {
 			this.button.addCallback(button, this.heading2.set);
 		},
 		set: function() {
-			this.block.format('h2');
+			var selectedText = this.selection.getText();
+			
+			if (selectedText != '') {
+				var html = '<h2>'+selectedText+'</h2>';
+				this.insert.html(html);
+			}
 		}
 	};
 };

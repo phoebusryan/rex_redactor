@@ -7,7 +7,12 @@ $.Redactor.prototype.blockquote = function() {
 			this.button.addCallback(button, this.blockquote.set);
 		},
 		set: function() {
-			this.block.format('blockquote');
+			var selectedText = this.selection.getText();
+			
+			if (selectedText != '') {
+				var html = '<blockquote>'+selectedText+'</blockquote>';
+				this.insert.html(html);
+			}
 		}
 	};
 };
